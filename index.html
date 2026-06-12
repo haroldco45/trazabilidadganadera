@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ley 2585 de 2026 — Ganadería Sostenible y Libre de Deforestación</title>
+<meta name="description" content="Ley 2585 de 2026 — Ganadería Sostenible y Libre de Deforestación. Trazabilidad ganadera en Colombia. Biblioteca Legal Colombiana.">
+<meta property="og:title" content="Ley 2585 de 2026 — Ganadería Sostenible Libre de Deforestación">
+<meta property="og:description" content="Colombia es el primer país de bosque tropical en sancionar una ley de trazabilidad ganadera. Conoce sus alcances, sistemas y derechos.">
+<meta property="og:url" content="https://vibraspositivashm.com/ley2585">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a3a1a">
+<!-- Manifest inline via JS blob (no archivos externos) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde-bosque: #1a3a1a;
+    --verde-medio: #2d5a2d;
+    --verde-vivo: #4a8c3f;
+    --verde-claro: #7ab648;
+    --tierra: #c8a45a;
+    --tierra-claro: #e8c97a;
+    --crema: #f5f0e8;
+    --blanco: #ffffff;
+    --gris-texto: #2c2c2c;
+    --gris-suave: #666;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--crema); color: var(--gris-texto); font-size: 16px; line-height: 1.6; }
+
+  /* SPLASH */
+  #splash { position: fixed; inset: 0; z-index: 9999; background: var(--verde-bosque); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; transition: opacity 0.6s ease; }
+  #splash.hidden { opacity: 0; pointer-events: none; }
+  .splash-emblema { width: 72px; height: 72px; border: 3px solid var(--tierra); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+  .splash-titulo { font-family: 'Playfair Display', serif; color: var(--tierra); font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; padding: 0 2rem; }
+  .splash-sub { font-family: 'Barlow Condensed', sans-serif; color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+
+  /* HEADER */
+  header { background: var(--verde-bosque); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--tierra); }
+  .header-inner { max-width: 900px; margin: 0 auto; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-logo { font-family: 'Barlow Condensed', sans-serif; color: var(--tierra); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+  .header-ley { font-family: 'Playfair Display', serif; color: var(--blanco); font-size: 0.9rem; }
+
+  /* HERO */
+  .hero { background: linear-gradient(160deg, var(--verde-bosque) 0%, var(--verde-medio) 60%, var(--verde-vivo) 100%); padding: 4rem 1.5rem 3rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 60% 40% at 80% 20%, rgba(122,182,72,0.15) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,164,90,0.1) 0%, transparent 60%); }
+  .hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-eyebrow { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--tierra); border: 1px solid var(--tierra); padding: 0.3rem 0.8rem; margin-bottom: 1.5rem; }
+  .hero-num { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 12vw, 8rem); font-weight: 900; color: var(--blanco); line-height: 0.85; letter-spacing: -0.03em; display: block; }
+  .hero-anio { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.5rem, 5vw, 2.5rem); color: var(--tierra); font-weight: 600; letter-spacing: 0.05em; display: block; margin-top: 0.3rem; }
+  .hero-titulo { font-family: 'Playfair Display', serif; font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--blanco); margin-top: 1.5rem; line-height: 1.3; max-width: 600px; }
+  .hero-fecha { margin-top: 1.5rem; font-family: 'Barlow Condensed', sans-serif; color: rgba(255,255,255,0.6); font-size: 0.85rem; letter-spacing: 0.1em; }
+  .hero-tags { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(122,182,72,0.25); color: var(--verde-claro); border: 1px solid rgba(122,182,72,0.4); padding: 0.25rem 0.7rem; border-radius: 2px; }
+
+  /* HITO */
+  .hito-banner { background: var(--tierra); padding: 1rem 1.5rem; }
+  .hito-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+  .hito-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .hito-texto { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--verde-bosque); letter-spacing: 0.02em; }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  section:last-child { border-bottom: none; }
+  .sec-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--verde-vivo); margin-bottom: 0.75rem; }
+  .sec-titulo { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--verde-bosque); line-height: 1.2; margin-bottom: 1.2rem; }
+  .sec-texto { font-size: 0.95rem; color: var(--gris-suave); line-height: 1.75; max-width: 680px; }
+  .sec-texto + .sec-texto { margin-top: 0.75rem; }
+
+  /* OBJETO */
+  .objeto-box { background: var(--verde-bosque); border-left: 4px solid var(--tierra); padding: 1.5rem 2rem; margin-top: 1.5rem; border-radius: 0 4px 4px 0; }
+  .objeto-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--tierra); margin-bottom: 0.75rem; }
+  .objeto-texto { font-family: 'Barlow', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.88); line-height: 1.75; font-style: italic; }
+
+  /* DATOS */
+  .datos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .dato-card { background: var(--blanco); border: 1px solid rgba(0,0,0,0.07); border-top: 3px solid var(--verde-vivo); padding: 1.25rem 1.25rem 1rem; }
+  .dato-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--verde-bosque); line-height: 1; }
+  .dato-unidad { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; color: var(--verde-vivo); font-weight: 600; letter-spacing: 0.05em; display: block; margin-top: 0.15rem; }
+  .dato-desc { font-size: 0.8rem; color: var(--gris-suave); margin-top: 0.5rem; line-height: 1.4; }
+
+  /* SISTEMAS */
+  .sistemas-lista { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .sistemas-lista li { display: flex; align-items: flex-start; gap: 1rem; background: var(--blanco); border: 1px solid rgba(0,0,0,0.07); padding: 1rem 1.25rem; }
+  .sys-icon { flex-shrink: 0; width: 36px; height: 36px; background: var(--verde-bosque); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+  .sys-info { flex: 1; }
+  .sys-nombre { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--verde-bosque); letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+  .sys-desc { font-size: 0.82rem; color: var(--gris-suave); line-height: 1.5; }
+
+  /* PILARES */
+  .pilares-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .pilar-card { background: var(--blanco); border: 1px solid rgba(0,0,0,0.07); padding: 1.5rem; position: relative; overflow: hidden; }
+  .pilar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--verde-vivo), var(--tierra)); }
+  .pilar-ico { font-size: 1.8rem; margin-bottom: 0.75rem; }
+  .pilar-titulo { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--verde-bosque); letter-spacing: 0.04em; margin-bottom: 0.6rem; }
+  .pilar-desc { font-size: 0.83rem; color: var(--gris-suave); line-height: 1.55; }
+
+  /* PLD */
+  .pld-box { background: linear-gradient(135deg, var(--verde-vivo) 0%, var(--verde-bosque) 100%); padding: 2rem; margin-top: 1.5rem; display: flex; gap: 1.5rem; align-items: flex-start; }
+  .pld-badge { flex-shrink: 0; width: 56px; height: 56px; background: var(--tierra); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+  .pld-titulo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--blanco); margin-bottom: 0.5rem; line-height: 1.25; }
+  .pld-desc { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+
+  /* INSTITUCIONAL */
+  .inst-lista { list-style: none; margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .inst-lista li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.87rem; color: var(--gris-texto); padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .inst-lista li::before { content: ''; width: 8px; height: 8px; flex-shrink: 0; background: var(--verde-vivo); border-radius: 50%; }
+  .conaldef-box { background: var(--crema); border: 1px solid var(--tierra); border-left: 4px solid var(--tierra); padding: 1.25rem 1.5rem; margin-top: 1rem; }
+  .conaldef-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tierra); margin-bottom: 0.5rem; }
+  .conaldef-desc { font-size: 0.87rem; color: var(--gris-texto); line-height: 1.65; }
+
+  /* FAQ */
+  .faq-lista { margin-top: 1.25rem; }
+  .faq-item { border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .faq-btn { width: 100%; background: none; border: none; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 0; gap: 1rem; }
+  .faq-pregunta { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--verde-bosque); letter-spacing: 0.02em; line-height: 1.3; }
+  .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; border: 2px solid var(--verde-vivo); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--verde-vivo); transition: transform 0.3s ease; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-respuesta { font-size: 0.87rem; color: var(--gris-suave); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0; }
+  .faq-item.open .faq-respuesta { max-height: 400px; padding-bottom: 1.1rem; }
+
+  /* STATS */
+  .stat-defo { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .stat-box { flex: 1; min-width: 180px; background: var(--verde-bosque); padding: 1.25rem; border-bottom: 3px solid var(--tierra); }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--tierra); line-height: 1; }
+  .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 0.4rem; line-height: 1.4; }
+
+  /* BOTONES */
+  .acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.75rem 1.5rem; border: none; cursor: pointer; transition: opacity 0.2s; }
+  .btn:hover { opacity: 0.85; }
+  .btn-primary { background: var(--verde-bosque); color: var(--tierra); }
+  .btn-outline { background: transparent; border: 2px solid var(--verde-bosque); color: var(--verde-bosque); }
+  .btn-tierra { background: var(--tierra); color: var(--verde-bosque); }
+
+  /* FOOTER */
+  footer { background: var(--verde-bosque); padding: 2rem 1.5rem; text-align: center; }
+  .footer-inner { max-width: 900px; margin: 0 auto; }
+  .footer-brand { font-family: 'Barlow Condensed', sans-serif; color: var(--tierra); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .footer-dev { font-size: 0.7rem; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; margin-top: 1rem; }
+
+  @media (max-width: 600px) {
+    .pld-box { flex-direction: column; }
+    .hito-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .datos-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="splash-emblema">🌿</div>
+  <div class="splash-titulo">Biblioteca Legal<br>Colombiana</div>
+  <div class="splash-sub">Cargando Ley 2585 · 2026</div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <span class="header-logo">Biblioteca Legal Colombiana</span>
+    <span class="header-ley">Ley 2585 · 2026</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">🇨🇴 República de Colombia · Congreso de la República</span>
+    <span class="hero-num">2585</span>
+    <span class="hero-anio">de 2026</span>
+    <h1 class="hero-titulo">Ganadería Sostenible<br>y Libre de Deforestación</h1>
+    <p class="hero-fecha">Aprobada: 5 de mayo de 2026 &nbsp;·&nbsp; Sancionada: 4 de junio de 2026</p>
+    <div class="hero-tags">
+      <span class="tag">Trazabilidad ganadera</span>
+      <span class="tag">Medio ambiente</span>
+      <span class="tag">Agropecuario</span>
+      <span class="tag">Deforestación</span>
+      <span class="tag">SINIGAN</span>
+      <span class="tag">SNIITA</span>
+    </div>
+  </div>
+</div>
+
+<div class="hito-banner">
+  <div class="hito-inner">
+    <span class="hito-icon">🏆</span>
+    <span class="hito-texto">Colombia: primer país de bosque tropical en el mundo en sancionar una ley de trazabilidad ganadera vinculada a la lucha contra la deforestación.</span>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <p class="sec-eyebrow">Artículo 1°</p>
+    <h2 class="sec-titulo">Objeto de la Ley</h2>
+    <p class="sec-texto">La Ley 2585 de 2026 establece los instrumentos para garantizar una cadena productiva de ganado sostenible y libre de deforestación, a través de la interoperabilidad gradual de los sistemas de trazabilidad del sector agropecuario con los sistemas de monitoreo ambiental, catastral y de registro de propiedad inmueble.</p>
+    <div class="objeto-box">
+      <div class="objeto-label">Texto del Artículo 1° — Objeto</div>
+      <p class="objeto-texto">"La presente Ley tiene por objeto disponer instrumentos para la trazabilidad de la cadena de ganado que garanticen una cadena productiva de ganado sostenible y libre de deforestación, a partir de la interoperabilidad gradual de los sistemas de trazabilidad con los que cuenta el sector de Agricultura y Desarrollo Rural, el Sistema de Monitoreo de Bosques y Carbono con que cuenta el Sector de Ambiente y Desarrollo Sostenible, el Catastro Multipropósito, el Sistema Nacional Catastral y el Registro de la propiedad inmueble."</p>
+    </div>
+    <div class="acciones">
+      <a href="https://www.ambitojuridico.com/sites/default/files/2026-06/L-2585-2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">📄 Texto oficial PDF</a>
+      <a href="https://cambiocolombia.com/medio-ambiente/articulo/2026/6/ley-de-trazabilidad-ganadera-ya-es-una-realidad-permitira-rastrear-el-origen-de-la-carne-y-combatir-la-deforestacion-en-colombia" target="_blank" rel="noopener" class="btn btn-outline">🔗 Más información</a>
+    </div>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Contexto ambiental</p>
+    <h2 class="sec-titulo">La ganadería y la deforestación en Colombia</h2>
+    <p class="sec-texto">La ganadería ha sido históricamente uno de los principales motores de la pérdida de bosques en Colombia, especialmente en la Amazonía. Esta ley responde a una crisis ambiental documentada y a las presiones del mercado internacional.</p>
+    <div class="stat-defo">
+      <div class="stat-box">
+        <div class="stat-num">3.3M</div>
+        <div class="stat-label">hectáreas de bosque deforestadas acumuladas en Colombia (área similar al departamento de Nariño)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">495K</div>
+        <div class="stat-label">hectáreas de bosque perdidas en municipios del arco amazónico entre 2016 y 2023</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">242K</div>
+        <div class="stat-label">bovinos promedio/año ingresados a los 3 municipios con mayor deforestación (2016–2023)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">14M</div>
+        <div class="stat-label">hectáreas destinadas a ganadería en Colombia</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Pilares de la norma</p>
+    <h2 class="sec-titulo">¿Qué hace la Ley 2585?</h2>
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-ico">🛰️</div>
+        <div class="pilar-titulo">Trazabilidad total</div>
+        <p class="pilar-desc">Ordena identificar el origen de cada cabeza de ganado bovino, rastreando si provino de zonas deforestadas, áreas protegidas o territorios de uso restringido.</p>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-ico">🔗</div>
+        <div class="pilar-titulo">Interoperabilidad de sistemas</div>
+        <p class="pilar-desc">Conecta el SINIGAN y el SNIITA con el Catastro Multipropósito, el Sistema de Monitoreo de Bosques y Carbono, y el Registro de la Propiedad Inmueble.</p>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-ico">🌱</div>
+        <div class="pilar-titulo">Acreditación sostenible</div>
+        <p class="pilar-desc">Crea la figura del "Productor Libre de Deforestación", acreditación gratuita para ganaderos que demuestren su desvinculación de la deforestación.</p>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-ico">🏛️</div>
+        <div class="pilar-titulo">Reforma institucional</div>
+        <p class="pilar-desc">Modifica la composición del SNIITA e incorpora a los Ministerios de Ambiente, Comercio, Transporte y Salud, al ICA y a organizaciones campesinas.</p>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-ico">🌍</div>
+        <div class="pilar-titulo">Acceso a mercados internacionales</div>
+        <p class="pilar-desc">Responde a exigencias de compradores europeos y globales que requieren verificar que la carne no provenga de zonas deforestadas.</p>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-ico">🔬</div>
+        <div class="pilar-titulo">Lucha contra la deforestación</div>
+        <p class="pilar-desc">Crea el Consejo Nacional de Lucha contra la Deforestación (CONALDEF) con carácter permanente para coordinar políticas de control y restauración ecológica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Arquitectura tecnológica</p>
+    <h2 class="sec-titulo">Sistemas que integra la ley</h2>
+    <p class="sec-texto">La norma ordena la interconexión gradual de los siguientes sistemas de información oficiales del Estado colombiano:</p>
+    <ul class="sistemas-lista">
+      <li>
+        <div class="sys-icon">🐄</div>
+        <div class="sys-info">
+          <div class="sys-nombre">SINIGAN — Sistema Nacional de Identificación e Información de Ganado Bovino</div>
+          <div class="sys-desc">Identifica y rastrea cada bovino en el territorio nacional. Principal base de datos ganadera del ICA.</div>
+        </div>
+      </li>
+      <li>
+        <div class="sys-icon">📋</div>
+        <div class="sys-info">
+          <div class="sys-nombre">SNIITA — Sistema Nacional de Identificación, Información y Trazabilidad Animal</div>
+          <div class="sys-desc">Abarca la trazabilidad del sistema agropecuario en su conjunto. La ley reforma su Comisión Nacional para ampliar la participación institucional.</div>
+        </div>
+      </li>
+      <li>
+        <div class="sys-icon">🌳</div>
+        <div class="sys-info">
+          <div class="sys-nombre">Sistema de Monitoreo de Bosques y Carbono (IDEAM)</div>
+          <div class="sys-desc">Detecta deforestación en tiempo real. La interoperabilidad permite cruzar datos de ganado con alertas de pérdida de bosque.</div>
+        </div>
+      </li>
+      <li>
+        <div class="sys-icon">🗺️</div>
+        <div class="sys-info">
+          <div class="sys-nombre">Catastro Multipropósito (IGAC)</div>
+          <div class="sys-desc">Información de uso y tenencia del suelo. Permite verificar si los predios ganaderos se ubican en zonas permitidas.</div>
+        </div>
+      </li>
+      <li>
+        <div class="sys-icon">📜</div>
+        <div class="sys-info">
+          <div class="sys-nombre">Registro de la Propiedad Inmueble</div>
+          <div class="sys-desc">Conecta la cadena ganadera con la titularidad legal del predio de origen, cerrando vacíos de trazabilidad predial.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Nueva figura jurídica</p>
+    <h2 class="sec-titulo">Productor Libre de Deforestación</h2>
+    <p class="sec-texto">La ley introduce una acreditación inédita en Colombia que permite a los ganaderos demostrar formalmente su compromiso ambiental y acceder a mercados que lo exigen.</p>
+    <div class="pld-box">
+      <div class="pld-badge">🏅</div>
+      <div>
+        <div class="pld-titulo">"Productor Libre de Deforestación"</div>
+        <p class="pld-desc">Acreditación gratuita que el Ministerio de Agricultura y Desarrollo Rural deberá reglamentar en un plazo no mayor a 6 meses. Los productores que ya cuenten con la Norma Técnica Colombiana NTC 6550:2021 (Sello Ambiental Colombiano para Ganadería Bovina y Bufalina) obtendrán esta acreditación de forma automática y gratuita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Estructura institucional</p>
+    <h2 class="sec-titulo">¿Quiénes velan por su cumplimiento?</h2>
+    <p class="sec-texto">La ley amplía la Comisión Nacional del SNIITA e incorpora nuevos actores para garantizar la trazabilidad desde múltiples frentes:</p>
+    <ul class="inst-lista">
+      <li>Ministerio de Agricultura y Desarrollo Rural (ente rector)</li>
+      <li>Ministerio de Ambiente y Desarrollo Sostenible</li>
+      <li>Ministerio de Comercio, Industria y Turismo</li>
+      <li>Ministerio de Transporte</li>
+      <li>Ministerio de Salud y Protección Social</li>
+      <li>Instituto Colombiano Agropecuario — ICA</li>
+      <li>Policía Nacional</li>
+      <li>Representantes gremiales del sector ganadero (Fedegán)</li>
+      <li>Organizaciones campesinas y de pequeños productores</li>
+    </ul>
+    <div class="conaldef-box">
+      <div class="conaldef-label">CONALDEF — Nueva institución permanente</div>
+      <p class="conaldef-desc"><strong>Consejo Nacional de Lucha contra la Deforestación.</strong> Creado con carácter permanente por esta ley, es el órgano coordinador de las acciones interinstitucionales del Estado para controlar la deforestación y proponer políticas de restauración ecológica vinculadas a la cadena ganadera.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="sec-eyebrow">Dudas comunes</p>
+    <h2 class="sec-titulo">Preguntas frecuentes</h2>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Qué significa que Colombia sea "el primero" en esta ley?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">Colombia es el primer país con extensas zonas de bosque tropical en el mundo que sanciona una ley específica vinculando la trazabilidad ganadera con la prevención de la deforestación. Organizaciones como Dejusticia y EIA la consideran un modelo para otros países de la región y el mundo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Afecta esta ley a todos los ganaderos colombianos?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">Sí. La ley aplica a toda la cadena de producción bovina. Tanto el sector público como el privado deben garantizar que sus cadenas de suministro no contribuyan a la deforestación. El reto mayor lo tienen productores en zonas de expansión de frontera ganadera (Amazonía, Orinoquía).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Cuándo entra en plena operación la interoperabilidad de los sistemas?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">La ley ordena una interconexión gradual. El Ministerio de Agricultura tiene 6 meses para reglamentar la acreditación de "Productor Libre de Deforestación". La integración completa de sistemas (SINIGAN, catastro, monitoreo de bosques) se implementará progresivamente según los plazos que establezca la reglamentación.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Qué pasa con los ganaderos del Bajo Cauca y regiones similares?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">Los ganaderos de regiones como Bajo Cauca, Córdoba, Sucre o Magdalena Medio también estarán sujetos a la ley. Fedegán ha señalado que el verdadero reto está en la reglamentación, la capacitación y los recursos para que los pequeños y medianos productores puedan transitar a la producción certificada sin afectar su economía.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Cómo beneficia esta ley a los consumidores colombianos?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">Permite saber si la carne que llega a los supermercados y restaurantes proviene de predios que respetan los ecosistemas estratégicos del país. A mediano plazo, fortalece la reputación de la carne colombiana en el exterior, lo que puede traducirse en mejores precios al productor y mayor competitividad en mercados internacionales.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span class="faq-pregunta">¿Qué es la NTC 6550:2021 y por qué es importante en esta ley?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-respuesta">Es la Norma Técnica Colombiana para Ganadería Bovina y Bufalina con Sello Ambiental Colombiano. Quienes ya la hayan obtenido acceden automáticamente a la acreditación de "Productor Libre de Deforestación" sin trámite adicional, reconociendo el esfuerzo previo de los ganaderos certificados.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <p class="sec-eyebrow">Acceder a la norma</p>
+    <h2 class="sec-titulo">Consulta el texto oficial</h2>
+    <p class="sec-texto">Accede al texto completo de la Ley 2585 de 2026 y a los análisis especializados del sector.</p>
+    <div class="acciones">
+      <a href="https://www.ambitojuridico.com/sites/default/files/2026-06/L-2585-2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">📄 Texto completo PDF</a>
+      <a href="https://www.dejusticia.org/ley-ganaderia-y-deforestacion" target="_blank" rel="noopener" class="btn btn-outline">📖 Análisis Dejusticia</a>
+      <a href="https://www.contextoganadero.com/ganaderia-sostenible/ganaderos-estas-son-las-oportunidades-para-abrir-mercados-de-la-nueva-ley-de-trazabilidad" target="_blank" rel="noopener" class="btn btn-tierra">🐄 CONtexto Ganadero</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Biblioteca Legal Colombiana</div>
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.55);line-height:1.6;">Esta app tiene fines informativos y educativos.<br>Para decisiones legales, consulte un abogado habilitado.</p>
+    <p class="footer-dev">Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados</p>
+  </div>
+</footer>
+
+<script>
+  // ── SPLASH ──
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('splash').classList.add('hidden'), 1600);
+  });
+
+  // ── FAQ ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── MANIFEST INLINE (sin archivos externos) ──
+  const manifest = {
+    name: "Ley 2585 de 2026 — Ganadería Sostenible",
+    short_name: "Ley 2585",
+    description: "Ganadería Sostenible y Libre de Deforestación — Biblioteca Legal Colombiana",
+    start_url: ".",
+    display: "standalone",
+    background_color: "#1a3a1a",
+    theme_color: "#1a3a1a",
+    lang: "es",
+    icons: [
+      { src: makeIcon(192), sizes: "192x192", type: "image/png" },
+      { src: makeIcon(512), sizes: "512x512", type: "image/png" }
+    ]
+  };
+
+  function makeIcon(size) {
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#1a3a1a';
+    ctx.fillRect(0, 0, size, size);
+    ctx.strokeStyle = '#c8a45a';
+    ctx.lineWidth = size * 0.04;
+    ctx.beginPath();
+    ctx.arc(size/2, size/2, size*0.38, 0, Math.PI*2);
+    ctx.stroke();
+    ctx.fillStyle = '#c8a45a';
+    ctx.font = `bold ${size*0.45}px serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('🌿', size/2, size/2);
+    return c.toDataURL('image/png');
+  }
+
+  // Inyectar manifest al DOM
+  try {
+    const icons = manifest.icons.map(i => ({...i, src: i.src}));
+    const blob = new Blob([JSON.stringify({...manifest, icons})], {type:'application/manifest+json'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('link');
+    link.rel = 'manifest'; link.href = url;
+    document.head.appendChild(link);
+  } catch(e) {}
+
+  // Service Worker: no se registra inline (Blob URL bloqueado por GitHub Pages).
+  // Para offline real, agrega un sw.js separado en el repo.
+</script>
+</body>
+</html>
